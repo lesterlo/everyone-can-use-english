@@ -2,6 +2,28 @@
 
 # 人人都能用英語
 
+## How to generate gitbook
+
+```
+# https://stackoverflow.com/questions/58498643/no-result-or-error-when-using-gitbook-pdf
+# Must use calibre-3.48.0, https://download.calibre-ebook.com/3.48.0/
+# Otherwise, no photo will be generated
+
+$ ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /opt/homebrew/bin/ebook-convert
+
+
+$ npm install @gitbook-ng/gitbook
+
+$ npx gitbook pdf ./ ./mybook.pdf
+
+# Error: Couldn't locate plugins "yahei, code, katex, splitter, github-buttons, disqus, search-plus, sharing-plus, expandable-chapters-small, image-captions, anchor-navigation-ex-toc, hints, custom-favicon", Run 'gitbook install' to install plugins from registry.
+
+$ npx gitbook install
+
+$ npx gitbook pdf ./ ./人人都能用英語.pdf
+
+```
+
 ## 目錄
 
 - [簡介](README.md)
